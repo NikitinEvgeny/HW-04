@@ -1,0 +1,173 @@
+.file-input-container {
+  position: relative;
+   display: flex;;
+}
+
+.file-input {
+  display: none;
+}
+
+.file-label {
+ 
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.file-label:hover {
+  background-color: #2990ff;
+}
+
+.file-icon {
+  width: 30px;
+  margin-right: 3px;
+}
+
+.form-container{
+position: absolute;
+top: -4px;
+}
+
+.submit{
+   margin-left: 5px;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  width:104px;
+}
+
+.submit_coment{
+   margin-left: 5px;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  width:104px;
+  position: relative;
+ position: relative;
+    left: 391px;
+
+}
+
+
+.coment_read {
+
+  border: 2px solid #2990ff;
+  width: 502px;
+   height: 200px;
+   resize: none;
+   font-size: 18px;  
+}
+
+.coment_write {
+  border: 2px solid #2990ff;
+  width: 502px;
+   height: 90px;
+   resize: none;
+   font-size: 18px;
+}
+
+.infa{
+position: relative;
+top: -60px;
+
+}
+
+.error{
+  color: red;
+}
+
+
+
+
+.form {
+  display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: sans-serif;
+   line-height: 1.5;
+   flex-direction: column;
+   
+
+ }
+
+.formConteiner{
+   
+   background-color: #fff;
+   border-radius: 15px;
+   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+   padding: 10px 20px;
+   transition: transform 0.2s;
+   width: 240px;
+   text-align: center;
+   position: absolute;
+    top: 50px;
+   
+
+
+}
+
+
+.submit_Exit{
+  margin-left: 46px;
+ align-items: center;
+ padding: 10px 20px;
+ background-color: #007bff;
+ color: #fff;
+ border-radius: 5px;
+ cursor: pointer;
+ width:104px;
+}
+
+
+.formConteiner_Exi{
+   
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  transition: transform 0.2s;
+  width: 240px;
+  text-align: center;
+  position: relative;
+  top: 50px;
+  left: 379px;
+
+
+}
+
+.form_Exit {
+  display: flex;
+   align-items: center;
+   justify-content: center;
+   font-family: sans-serif;
+   line-height: 1.5;
+   flex-direction: column;
+   
+
+ }
+
+
+ .login{
+position: relative;
+left: 50%;
+top: 36px;
+text-align: center;
+transform: translate(-50%);
+align-items: center;
+padding: 10px 20px;
+background-color: #007bff;
+color: #fff;
+border-radius: 5px;
+cursor: pointer;
+width:104px;
+
+ }
