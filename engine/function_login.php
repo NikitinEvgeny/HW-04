@@ -3,6 +3,7 @@ $db = new PDO (dsn:'sqlite:../data/db.db');
 $login = $_POST['login'] ?? null;
 $password = $_POST['password'] ?? null;
 
+
 $stmt = $db->prepare(query: 'SELECT user_login FROM users');
 $stmt->execute();
 $user_login = $stmt->fetchAll(mode:PDO::FETCH_COLUMN);

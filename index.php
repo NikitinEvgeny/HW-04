@@ -1,8 +1,9 @@
 <?php
 require 'config/config.php';
 require 'engine/Controller.php';
-
 session_start();
+$db = new PDO (dsn:'sqlite:data/db.db');
+
 $auth = $_SESSION['auth'] ?? null;
 if (isset($_SESSION['naim']))
 {
@@ -11,6 +12,14 @@ if (isset($_SESSION['naim']))
 else {
   $naim = "";
 };
+
+
+$coment_stmt = $db->prepare(query:'SELECT username,comment,date FROM comments');
+$coment_stmt->execute();
+$users = $coment_stmt->fetchAll(mode:PDO::FETCH_ASSOC);
+//var_dump($users);
+
+
 
 ?>
 
@@ -24,6 +33,7 @@ else {
 <link rel="stylesheet" href="css/rest.css">
 <link rel="stylesheet" href="css/gellery.css">
 <link rel="stylesheet" href="css/form.css">
+<link rel="stylesheet" href="css/comment.css">
 <title>slider</title>
  </head>
  <body> 
@@ -92,29 +102,39 @@ else {
   <div class ="pointers_bloc_right">
   <div class ="pointers_right"></div>
   </div>
+  </div>
+
+<div class="conteiner_comemetn"> 
 
 
-
-  <form action="#" method="post">
-  
-  <textarea id="read" name="cread" rows="5" cols="33"   readonly class = "coment_read"></textarea >
-  <?php 
-  
-  if (isset($_SESSION['naim']) )
-  {
-  echo '<textarea id="coment" name="coment" rows="5" cols="33"  class = "coment_write"></textarea >
-   <div class = "submit_coment" >
-   <input type="submit" value="отправить"></p>
-   </div>';
+ <?php
+foreach ($users  as $brand => $items)
+{
+ 
+  echo  "<div class = 'comemetn'>";
+    foreach ($items as $key => $value)
+    {
+     echo "<div class = 'com_{$key}'>$value</div>"  ;  
+    }
+    echo  "</div>";
+    
+   
   }
   ?>
-  </form>
+
+</div>
+
+
+ <?php
+  if (isset($_SESSION['naim']) )
+  {
+    include ('templates/form_coments.php');
+  }
+  ?>
   
+  </div>
 
-</div>
 
-
-</div>
 <div  id ="modalB" class = "modalBig hide" >  
 <div  class ="modalB_img">
 <img src="img/1.jpg"  id = "1" alt="1" class ="modalB_Img_fit"/>

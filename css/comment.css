@@ -1,0 +1,44 @@
+.conteiner_comemetn{
+  
+background-color: #98ecec1f;
+padding: 25px;
+width: 500px;
+height: 350px;
+overflow-y: auto;
+
+
+
+}
+
+.comemetn{
+   margin-top: 15px; 
+   background-color: #98ebb4ad;
+   border-radius: 10px;
+   padding: 10px;
+   width: fit-content;
+   margin-left: auto;
+   
+   
+   
+}
+
+.com_username{
+
+margin-bottom: 5px;
+text-align: right;
+color: brown;
+font-size: 20px;
+}
+
+
+.com_comment{
+    margin-bottom: 10px;
+    font-family:'Comic Sans MS', cursive, sans-serif;
+    font-size: 17px;
+}
+
+.com_date{
+
+    font-size: 11px;
+
+}
